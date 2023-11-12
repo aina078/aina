@@ -1,0 +1,39 @@
+<%= form_for @okashi do |f| %>
+
+
+    <div class="field">
+      <%= f.label :お菓子の名前 %>
+      <%= f.text_field :name, :size => 30 %>
+    </div>
+  
+    <div class="field">
+      <%= f.label :ジャンル  %>
+      <%= f.select :genre, 
+      [["キャンデー", "キャンデー"], 
+      ["チョコレート", "チョコレート"], 
+      ["ガム", "ガム"], 
+      ["ビスケット", "ビスケット"], 
+      ["ケーキ", "ケーキ"], 
+      ["スナック", "スナック"]], include_blank: "選択して下さい" %>
+    </div>
+  
+  
+    <div class="field">
+      <%= f.label :個数  %>
+      <%= f.number_field :item, :size => 10 %>
+    </div>
+    <div class="field">
+    <%= f.label :購入場所 %>
+    <%= f.text_field :place, :size => 30 %>
+  </div>
+  <div class="field">
+  <%= f.label :会社名 %>
+  <%= f.text_field :company, :size => 30 %>
+  </div>
+  
+    <div class="field">
+      <%= f.label :感想  %>
+      <%= f.text_area :kansou, :size => "30x2" %>
+    </div>
+    <%= f.submit "投稿する" %>
+  <% end %>

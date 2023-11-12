@@ -1,0 +1,58 @@
+<h1>GeekTwitter</h1>
+<h3>Tweet詳細</h3>
+<div class="okashi">
+  <p><%= @okashi.name %></p>
+  <p><%= @okashi.genre %></p>
+  <p><%= @okashi.kansou %></p>
+  <p><%= @okashi.item %></p>
+  <p><%= @okashi.place %></p>
+  <p><%= @okashi.company %></p>
+  <p><%= @okashi.created_at %></p>
+    <% if user_signed_in? %>
+      <% if current_user.already_liked?(@okashi) %>
+        <%= link_to okashi_like_path(@okashi), method: :delete do %>
+          <i class="fa-heart"></i><%= @okashi.likes.count %>
+          <p>いいねを取り消す</p><%= @okashi.likes.count %>
+        <% end %>
+      <% else %>
+        <%= link_to okashi_likes_path(@okashi), method: :post do %>
+          <i class="far fa-heart"></i><%= @okashi.likes.count %>
+          <p>いいね</p><%= @okashi.likes.count %>
+        <% end %>
+      <% end %>
+    <% else %>
+    <i class="far fa-heart"></i><%= @okashi.likes.count %>
+      <p>いいねの数 = </p><%= @okashi.likes.count %>
+    <% end %>
+  <%= link_to "編集する", edit_okashi_path(@okashi.id) %>
+  タグ
+  <% @okashi.tags.each do |tag| %>
+    タグ<span><%= tag.name %></span>
+  <% end %>
+</div>
+
+<h2>いいねしたユーザー</h2>
+<% @okashi.liked_users.each do |user| %>
+  <li><%= user.email %></li>
+<% end %>
+<div class="comment-wrapper">
+  <p>コメント一覧</p>
+  <% @comments.each do |c| %>
+    <div>
+      <%= c.user.email unless c.user.blank? %>
+      <br>
+      <%= c.content %>
+    </div>
+      <br>
+  <% end %>
+
+  <% if user_signed_in? %>
+    <%= form_with(model: [@okashi, @comment], local: true) do |f| %>
+      <%= f.text_area :content %>
+      <%= button_tag type: "submit" do %>
+        <i class="far fa-comments"></i> コメントする
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
+<%= link_to "Tweet一覧に戻る", okashis_path %>
