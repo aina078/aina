@@ -21,7 +21,10 @@
       <ul>
         <li><%= link_to "ホーム", okashis_path %></li>
         <li><%= link_to "新規投稿", new_okashi_path %></li>
+        <% if user_signed_in? %>
         <li><%= link_to "マイページ", user_path(current_user.id) %></li>
+        <% else %>
+        <% end %>
       </ul>
       </div>
     </header>

@@ -1,5 +1,5 @@
 class OkashisController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, only: [:new, :create]
     def index
         @okashis = Okashi.all
         @rank_okashis = Okashi.all.sort {|a,b| b.liked_users.count <=> a.liked_users.count}
