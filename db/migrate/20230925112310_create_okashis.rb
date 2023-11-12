@@ -1,6 +1,5 @@
 class CreateOkashis < ActiveRecord::Migration[6.1]
   def change
-    add_column :okashis, :image, :string
     create_table :okashis do |t|
       t.string :name
       t.string :genre
