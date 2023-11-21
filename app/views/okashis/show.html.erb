@@ -13,7 +13,9 @@
   <p><%= @okashi.company %></p>
   <br>
   <br>
+  <div class="b">
   <p><%= @okashi.kansou %></p>
+  </div>
   <p><%= @okashi.created_at %></p>
     <% if user_signed_in? %>
       <% if current_user.already_liked?(@okashi) %>
