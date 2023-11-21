@@ -52,7 +52,7 @@ class OkashisController < ApplicationController
         @okashis=Okashi.where(genre: "チョコレート")
       end
       def gam
-        @okashis=Okashi.where(genre: "ガム")
+        @okashis=Okashi.where(genre: "ガム、グミ")
       end
       def snack
         @okashis=Okashi.where(genre: "スナック")

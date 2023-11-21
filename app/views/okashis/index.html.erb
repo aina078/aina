@@ -1,19 +1,31 @@
 
 <div class="okashis-container">
+<div style="text-align: center">
 <%= image_tag 'aa.jpg', class:'photo' %>
-
-<div class="genre">
+</div>
+<div class="zyanru">
 ジャンル
+</div>
+<div class="genre">
 <br><%= link_to "キャンディー", okashis_candy_path %>
 <br><%= link_to "ケーキ", okashis_cake_path %>
 <br><%= link_to "チョコレート", okashis_choco_path %>
-<br><%= link_to "ガム", okashis_gam_path %>
+<br><%= link_to "ガム、グミ", okashis_gam_path %>
 <br><%= link_to "スナック", okashis_snack_path %>
 <br><%= link_to "ビスケット", okashis_bis_path %>
 </div>
-
-About
-  
+<div class="about">
+このサイトについて
+</div>
+<div class="coment">
+いつも同じお菓子食べていませんか？
+<br>
+そんな人に使ってもらいたい、感想投稿サイト。
+<br>
+美味しいお菓子あったら、ぜひ共有してください！
+<br>
+一緒にお菓子の冒険しましょう！
+</div>
   <% @rank_okashis.each do |t| %>
     <% end %>
 </div>

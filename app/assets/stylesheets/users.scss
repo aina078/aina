@@ -1,3 +1,17 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.actions{
+    display       : inline-block;
+    border-radius : 50%;          /* 角丸       */
+    font-size     : 24pt;        /* 文字サイズ */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 12px 15px;   /* 余白       */
+    background    : rgba(243, 243, 109, 0.83);     /* 背景色     */
+    color         : rgba(228, 141, 0, 0.80);     /* 文字色     */
+    line-height   : 1em;         /* 1行の高さ  */
+    transition    : .3s;         /* なめらか変化 */
+    box-shadow    : 8px 8px 6px #666666;  /* 影の設定 */
+    border        : 2px solid rgba(243, 243, 109, 0.83);    /* 枠の指定 */
+  }

@@ -4,11 +4,19 @@
 .photo{
     margin-top: 200px;
     width: 800px;
-    height: 500px;   
+    height: 500px; 
+    -ms-ime-align: center     
+}
+.zyanru{
+    margin-left:100px ;
+    font-size: 72px;    
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+    font-family: Yomogi
 }
 .genre{
-    margin-left:150px ;
-    margin-top: 100px;
+    margin-left:100px ;
     color: #C08328;
     font-family: Yomogi;
     font-size: 72px;
@@ -20,4 +28,17 @@
 
 .okashis-container{
     height: 2000px;
+}
+.about{
+    margin-left:100px ;
+    margin-top: 100px;
+    font-size: 48px;    
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.coment{
+    margin-top: 50px;
+    font-size: 24px;    
+    text-align: center   
 }
