@@ -1,12 +1,19 @@
-<h1>GeekTwitter</h1>
-<h3>Tweet詳細</h3>
+
+<h3>投稿の詳細</h3>
 <div class="okashi">
+  
   <p><%= @okashi.name %></p>
+  <br>
   <p><%= @okashi.genre %></p>
-  <p><%= @okashi.kansou %></p>
+  <br>
   <p><%= @okashi.item %></p>
+  <br>
   <p><%= @okashi.place %></p>
+  <br>
   <p><%= @okashi.company %></p>
+  <br>
+  <br>
+  <p><%= @okashi.kansou %></p>
   <p><%= @okashi.created_at %></p>
     <% if user_signed_in? %>
       <% if current_user.already_liked?(@okashi) %>
@@ -25,10 +32,8 @@
       <p>いいねの数 = </p><%= @okashi.likes.count %>
     <% end %>
   <%= link_to "編集する", edit_okashi_path(@okashi.id) %>
-  タグ
-  <% @okashi.tags.each do |tag| %>
-    タグ<span><%= tag.name %></span>
-  <% end %>
+  
+ 
 </div>
 
 <h2>いいねしたユーザー</h2>

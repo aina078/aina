@@ -10,11 +10,17 @@
 <h2>ユーザーの投稿一覧</h2>
 <% @user.okashis.each do |t| %>
   <%= t.user.name %>
+  <br>
   <%= t.name %>
+  <br>
   <%= t.genre %>
+  <br>
   <%= t.kansou %>
+  <br>
   <%= t.item %>
+  <br>
   <%= t.place %>
+  <br>
   <%= t.company %>
 <% end %>
 
